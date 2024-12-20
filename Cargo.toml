@@ -1,0 +1,25 @@
+[package]
+name = "Course-kudasai"
+version = "0.0.1"
+edition = "2021"
+
+
+[package.metadata.winresource]
+OriginalFilename = "選課小幫手.exe"
+LegalCopyright = "Copyright © 2024 NTUST-Tool"
+
+[dependencies]
+reqwest = { version = "0.12.9", features = ["json", "native-tls-vendored"] }
+tokio = { version = "1.42.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+clap = { version = "4.5.23", features = ["derive"] }
+serde_json = "1.0"
+tabled = "0.17.0"
+regex = "1.11.1"
+
+[build-dependencies]
+winresource = "0.1"
+
+[[bin]]
+name = "Course-kudasai"
+path = "src/main.rs"
