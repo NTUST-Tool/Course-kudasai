@@ -11,9 +11,10 @@
 courses = CS2005701, CC1253301
 webhook = https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
 interval = 0.3
+sys_notify = true
 ```
 
-`courses` 是課號，逗號分隔。`webhook` 留空代表不通知。`interval` 是每門課的查詢間隔，單位秒，可填小數。設定檔路徑可用 `CONFIG` 環境變數覆寫。
+`courses` 是課號，逗號分隔。`webhook` 留空代表不通知。`interval` 是每門課的查詢間隔，單位秒，可填小數，有空位時每輪都發系統通知。`sys_notify` 控制系統通知，Windows 下同時發右下角快顯通知並閃爍工作列按鈕，閃到把視窗叫到前景才停。通知借 PowerShell 的名義發送，會顯示 PowerShell 的圖示與名稱。設定檔路徑可用 `CONFIG` 環境變數覆寫。
 
 學期不用設定，啟動時自動打 `semestersinfo` 取得。
 
